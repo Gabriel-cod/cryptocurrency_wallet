@@ -1,0 +1,23 @@
+{% extends 'shared/base.html' %}
+{% block title %}Create New Cryptocurrency{% endblock %}
+{% block header %}New Cryptocurrency{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="body-form">
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="form-content">
+                <div class="input-field">
+                    <label for="">Cryptocurrency Name</label><br>
+                    {{ form.crypto_name }}
+                </div>
+                <div class="input-field">
+                    <label for="">Acronym</label><br>
+                    {{ form.acronym }}
+                </div>
+            </div>
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

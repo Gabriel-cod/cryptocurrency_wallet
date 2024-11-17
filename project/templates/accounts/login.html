@@ -1,0 +1,25 @@
+{% extends 'shared/base.html' %}
+{% block content %}
+<div class="container-auth">
+    <div class="title-auth"><h2>Sign in</h2></div>
+    <div class="body-auth">
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="form-content">
+                <div class="input-field">
+                    <label for="#id_username">Username</label><br>
+                    {{ form.username }}
+                </div>
+                <div class="input-field">
+                    <label for="#id_password">Password</label><br>
+                    {{ form.password }}
+                </div>
+            </div>
+            <button type="submit" class="btn-submit">Sign in</button>
+        </form>
+    </div>
+    <div class="other-actions">
+        <span class="link-register">Don't have an account? <a href="{% url 'register' %}">Register now</a></span>
+    </div>
+</div>
+{% endblock %}

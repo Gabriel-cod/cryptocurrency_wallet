@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    background-color: #172d44;
+    font-family: "Kanit", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+nav.navbar{
+    width: 100%;
+    position: fixed;
+    background-color: #0D1217;
+}
+
+div.navbar{
+    height: 10vh;
+    width: 100%;
+}
+
+div.container-fluid{
+    width: 100%;
+}
+
+div.container-fluid *{
+    display: inline-block;
+    color: white;
+    height: 100%;
+}
+
+a.navbar-brand{
+    box-sizing: border-box;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: top;
+    padding: 16px;
+    padding-bottom: 0;
+    cursor: pointer;
+}
+
+ul.navbar-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li.nav-item{
+    float: left;
+}
+
+a.nav-link{
+    padding: 16px;
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+
+    &:hover{
+        background-color: #13202e;
+    }
+}
+
+span.navbar-text{
+    color: white;
+    padding: 16px;
+    float: right;
+}
+
+button.btn-submit{
+    border: none;
+    background-color: rgb(0, 200, 0);
+    padding: 12px 0;
+    text-align: center;
+    border-radius: 60px;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+
+    &:hover{
+        background-color: rgb(0, 100, 0);
+    }
+}
+
+div.form-content{
+    margin: 20px 0;
+}
+
+div.form-content div.input-field{
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+div.form-content div.input-field input{
+    padding: 5px 0;
+    width: 100%;
+}
+
+div.container-auth, div.container{
+    margin: 20px auto;
+    width: 500px;
+    height: auto;
+    background-color: #151515;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 5px 5px 10px 2px rgb(0 0 0 / .8);
+}
+
+div.container-auth div.other-actions{
+    width: 100%; 
+    margin-top: 20px; 
+    text-align: left;
+}
+
+div.container-auth div.other-actions a{
+    color: cyan;
+}
+
+div.form-content div.input-field label{
+    font-weight: 500;
+}
+
+div.form-content div.input-field ul{
+    list-style-type: none;
+}
+
+div.form-content div.input-field ul.errorlist{
+    color: rgb(255, 230, 110);
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+div.content{
+    min-height: 80vh;
+    box-sizing: border-box;
+}
+
+div.footer{
+    width: 100%;
+    height: 10vh;
+    background-color: #0D1217;
+    position: relative;
+    bottom: 0;
+    text-align: center;
+}
+
+div.footer div.signature{
+    display: block;
+    box-sizing: border-box;
+    line-height: 20px;
+    padding: 20px;
+}
+
+div.footer div.signature h5{
+    font-size: 15px;
+    font-weight: 300;
+    color: white;
+}
+
+div.container-home > table.wallet-table, div.container-cryptos > table.crypto-table{
+    display: block;
+    color: white;
+    font-weight: 300;
+    margin: 20px auto 0 auto;
+    width: 60%;
+    max-height: 300px;
+    overflow-y: auto;
+    border-collapse: collapse;
+    background-color: rgb(50, 50, 50);
+    & th, td{
+        width: 20%;
+        text-align: center;
+        padding: 3px;
+        border: 1px solid rgb(10, 10, 10);
+        border-collapse: collapse;
+    }
+
+    & th:last-of-type, td:last-of-type{
+        width: 5%;
+    }
+
+    & tr:nth-child(even){
+        background-color: rgb(90, 90, 90);
+    }
+
+    & tr:hover{
+        background-color: rgb(120, 120, 120);
+    }
+
+    & th{
+        background-color: #151515;
+        color: white;
+        padding: 12px 0;
+    }
+}
+
+
+button.delete-item, button.add-item{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    border: 2px solid rgb(231, 50, 50);
+    background-color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 10px #333;
+    overflow: hidden;
+    transition: .3s;
+
+    &:hover{
+        background-color: rgb(245, 207, 207);
+        transform: scale(1.1);
+        box-shadow: 0 0 4px #111;
+        transition: .3s;
+    }
+}
+
+a > button.add-item{
+    border: 2px solid rgb(32, 191, 0);
+}
+
+button.delete-confirm{
+    display: inline-block;
+    box-sizing: content-box;
+    background-color: red;
+    color: white;
+    padding: 7px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-left: 40px;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 15px;
+    width: 100px;
+    cursor: pointer;
+
+    &:hover{
+        background-color: rgb(148, 0, 0);
+    }
+}
+
+a.return-button{
+    display: inline-block;
+    background-color: #0006b6;
+    color: white;
+    padding: 7px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 15px;
+    width: 100px;
+
+    &:hover{
+        background-color: #000482;
+    }
+}
+
+h3.text-cancel-confirm{
+    text-align: left;
+    margin: 10px 0 20px 0;
+    font-weight: 400;
+    font-style: normal;
+}
+
+div.header{
+    display: block;
+    margin: 50px auto;
+
+    & h2.header-text{
+        text-align:center;
+       
+        text-transform:uppercase;
+        font-size:26px; letter-spacing:1px;
+        color: #d6dddd;
+       }
+}
+
+p.note{
+    box-sizing: border-box;
+    background-color: #ccc;
+    color: #151515;
+    font-weight: 300;
+    width: 60%;
+    margin: 5px auto;
+    padding: 10px;
+
+    &::before{
+        content: 'Note: ';
+        font-weight: bold;
+    }
+}

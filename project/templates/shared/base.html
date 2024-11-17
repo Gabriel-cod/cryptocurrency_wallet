@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'home' %}">Cripto Wallet</a>
+            <div class="navbarText">
+                <ul class="navbar-list">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'cryptocurrencies' %}">Cryptocurrencies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'create-crypto' %}">Register New Crypto</a>
+                    </li>
+                    {% if not user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Sign in</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+            {% if user.is_authenticated %}
+            <span class="navbar-text">
+                <a href="{% url 'logout' %}">Logout</a>
+            </span>
+            {% else %}
+            <span class="navbar-text">
+                Don't have an account? <a href="{% url 'register' %}">Register now</a>
+            </span>
+            {% endif %}
+        </div>
+    </nav>
+    <div class="navbar"></div>
+    <div class="header">
+        <h2 class="header-text">{% block header %}{% endblock %}</h2>
+    </div>
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div class="footer">
+        <div class="signature"><h5>Created by Gabriel Alves Silva</h5></div>
+    </div>
+</body>
+</html>

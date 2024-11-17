@@ -1,0 +1,13 @@
+{% extends 'shared/base.html' %}
+{% block title %}Confirm Delete{% endblock %}
+{% block content %}
+<div class="container">
+    <form action="" method="post">
+        {% csrf_token %}
+        <h2>Confirm Delete</h2>
+        <h3 class="text-cancel-confirm">Are you sure you want to delete "{{ object.crypto_name }}" from your wallet?</h3>
+        <a href="javascript:history.back()" class="return-button">No, cancel.</a>
+        <button type="submit" value="Confirm" class="delete-confirm">Yes, I'm sure.</button>
+    </form>
+</div>
+{% endblock %}
